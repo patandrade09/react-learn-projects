@@ -20,7 +20,7 @@ const ExpenseForm = (props) => {
 
     const expenses = {
       title: enteredTitle,
-      amount: enteredAmount,
+      price: enteredAmount,
       date: new Date(enteredDate),
     };
 
@@ -31,9 +31,6 @@ const ExpenseForm = (props) => {
         setEnteredTitle("")
         props.onSaveExpenseData(expenses)
     }
-
-
-
     return (
       <form onSubmit={submitHandler}>
         <div className="new-expense__controls">
